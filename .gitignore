@@ -1,0 +1,22 @@
+.env
+.env.*
+!.env.example
+
+# Go build files
+bin/
+build/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Go cache
+tmp/
+*.log
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
