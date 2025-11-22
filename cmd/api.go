@@ -24,15 +24,15 @@ func (app *application) mount() http.Handler {
 	r.Use(middleware.RealIP) //important for tracing and rate limiting and analytics
 	r.Use(middleware.Logger)
 	r.Use(middleware.Recoverer)
+	//set a timeout value on the request context, that will signal through
+	//ctx.Done() that the request has time out and further processing
+	//should stop
+	r.Use(middleware.Timeout(60 * time.Second))
 	
 	r.Get("/health", func(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte("root."))
 	})
 	
-	//set a timeout value on the request context, that will signal through
-	//ctx.Done() that the request has time out and further processing
-	//should stop
-	r.Use(middleware.Timeout(60 * time.Second))
 	
 	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte("hi"))
