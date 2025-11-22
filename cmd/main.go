@@ -1,6 +1,9 @@
 package main
 
-import "log"
+import (
+	"log"
+	"os"
+)
 
 func main() {
 	cfg := config{
@@ -15,5 +18,6 @@ func main() {
 	//then api.run(h) but in run check for error as it returns error
 	err != nil {
 		log.Printf("server has failed to start, err: %s", err)
+		os.Exit(1)
 	}
 }
