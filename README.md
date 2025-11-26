@@ -1,4 +1,4 @@
-#GO E-com API backend
+## GO E-com API backend
 A RESTful API for e-commerce operations built with Go, featuring product management and order processing capabilities.
 This project provides a backend API for managing an e-commerce platform with support for products, orders, and order items. Built with modern Go practices, it uses PostgreSQL for data persistence and includes comprehensive API documentation.
 
