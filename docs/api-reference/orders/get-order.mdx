@@ -1,0 +1,83 @@
+---
+title: Get Order by ID
+api: GET /orders/{id}
+---
+
+## Overview
+
+Retrieve an order with aggregated data including all items and calculated total price.
+
+<RequestExample>
+
+```bash
+curl http://localhost:8080/orders/1
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json
+{
+  "id": 1,
+  "customerId": 123,
+  "totalPriceCents": 199998,
+  "items": [
+    {
+      "productId": 1,
+      "productName": "Laptop",
+      "quantity": 2,
+      "priceCents": 99999,
+      "totalCents": 199998
+    }
+  ],
+  "createdAt": "2025-01-15T10:30:00Z"
+}
+```
+
+</ResponseExample>
+
+<ParamField path="id" type="integer" required>
+  Order ID
+</ParamField>
+
+<ResponseField name="id" type="integer">
+  Unique identifier for the order
+</ResponseField>
+
+<ResponseField name="customerId" type="integer">
+  Customer ID who placed the order
+</ResponseField>
+
+<ResponseField name="totalPriceCents" type="integer">
+  Total price of the order in cents (calculated from all items)
+</ResponseField>
+
+<ResponseField name="items" type="array">
+  List of items in the order
+</ResponseField>
+
+<ResponseField name="items[].productId" type="integer">
+  Product ID
+</ResponseField>
+
+<ResponseField name="items[].productName" type="string">
+  Name of the product
+</ResponseField>
+
+<ResponseField name="items[].quantity" type="integer">
+  Quantity ordered
+</ResponseField>
+
+<ResponseField name="items[].priceCents" type="integer">
+  Price per unit in cents
+</ResponseField>
+
+<ResponseField name="items[].totalCents" type="integer">
+  Total price for this item in cents (quantity × priceCents)
+</ResponseField>
+
+<ResponseField name="createdAt" type="string">
+  Timestamp when the order was created
+</ResponseField>
+

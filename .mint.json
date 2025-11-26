@@ -1,0 +1,87 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "E-commerce API",
+  "logo": {
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg"
+  },
+  "favicon": "/favicon.svg",
+  "colors": {
+    "primary": "#0D9373",
+    "light": "#07C983",
+    "dark": "#0D9373",
+    "anchors": {
+      "from": "#0D9373",
+      "to": "#07C983"
+    }
+  },
+  "topbarLinks": [
+    {
+      "name": "Support",
+      "url": "mailto:support@example.com"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "API",
+    "url": "http://localhost:8080"
+  },
+  "tabs": [
+    {
+      "name": "API Reference",
+      "url": "api-reference"
+    }
+  ],
+  "anchors": [
+    {
+      "name": "GitHub",
+      "icon": "github",
+      "url": "https://github.com/atharvamhaske/Ecom-GoAPI"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Get Started",
+      "pages": [
+        "docs/introduction",
+        "docs/quickstart"
+      ]
+    },
+    {
+      "group": "API Reference",
+      "pages": [
+        "docs/api-reference/introduction"
+      ]
+    },
+    {
+      "group": "Health Endpoints",
+      "pages": [
+        "docs/api-reference/health/health-check",
+        "docs/api-reference/health/root"
+      ]
+    },
+    {
+      "group": "Products",
+      "pages": [
+        "docs/api-reference/products/create-product",
+        "docs/api-reference/products/get-product"
+      ]
+    },
+    {
+      "group": "Orders",
+      "pages": [
+        "docs/api-reference/orders/get-order"
+      ]
+    }
+  ],
+  "footerSocials": {
+    "github": "https://github.com/atharvamhaske/Ecom-GoAPI"
+  },
+  "openapi": "openapi.yaml",
+  "api": {
+    "baseUrl": "http://localhost:8080",
+    "playground": {
+      "mode": "simple"
+    }
+  }
+}
+

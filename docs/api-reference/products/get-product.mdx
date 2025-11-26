@@ -1,0 +1,55 @@
+---
+title: Get Product by ID
+api: GET /product/{id}
+---
+
+## Overview
+
+Retrieve a single product by its ID.
+
+<RequestExample>
+
+```bash
+curl http://localhost:8080/product/1
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json
+{
+  "id": 1,
+  "name": "Laptop",
+  "priceInCenters": 99999,
+  "quantity": 50,
+  "createdAt": "2025-01-15T10:30:00Z"
+}
+```
+
+</ResponseExample>
+
+<ParamField path="id" type="integer" required>
+  Product ID
+</ParamField>
+
+<ResponseField name="id" type="integer">
+  Unique identifier for the product
+</ResponseField>
+
+<ResponseField name="name" type="string">
+  Name of the product
+</ResponseField>
+
+<ResponseField name="priceInCenters" type="integer">
+  Price in cents
+</ResponseField>
+
+<ResponseField name="quantity" type="integer">
+  Available stock quantity
+</ResponseField>
+
+<ResponseField name="createdAt" type="string">
+  Timestamp when the product was created
+</ResponseField>
+
