@@ -1,8 +1,5 @@
-# E-commerce API backend
+#GO E-com API backend
 A RESTful API for e-commerce operations built with Go, featuring product management and order processing capabilities.
-
-## Overview
-
 This project provides a backend API for managing an e-commerce platform with support for products, orders, and order items. Built with modern Go practices, it uses PostgreSQL for data persistence and includes comprehensive API documentation.
 
 ## Features
@@ -33,13 +30,12 @@ This project provides a backend API for managing an e-commerce platform with sup
 │   ├── env/               # Environment configuration
 │   └── json/              # JSON utilities
 ├── docs/                  # Mintlify documentation
-├── scripts/               # Utility scripts
 ├── docker-compose.yaml    # Docker services configuration
 ├── openapi.yaml           # OpenAPI specification
 └── sqlc.yaml              # SQLC configuration
 ```
 
-## API Endpoints
+## API Endpoints List
 
 ### Health Check
 
@@ -99,20 +95,7 @@ CREATE TABLE order_items (
   created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 ```
-
-## Configuration
-
-The application uses the following configuration:
-
-- **Server Address**: `:8080` (configurable via code)
-- **Write Timeout**: 30 seconds
-- **Read Timeout**: 10 seconds
-- **Idle Timeout**: 1 minute
-- **Request Timeout**: 60 seconds
-
-## Middleware
-
-The API includes the following middleware:
+## Middlewares
 
 - Request ID (for tracing and rate limiting)
 - Real IP extraction
