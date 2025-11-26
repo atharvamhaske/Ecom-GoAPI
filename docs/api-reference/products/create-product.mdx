@@ -1,0 +1,49 @@
+---
+title: Create Product
+api: POST /product
+---
+
+## Overview
+
+Create a new product in the catalog.
+
+<RequestExample>
+
+```bash
+curl -X POST http://localhost:8080/product \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Laptop",
+    "priceInCents": 99999,
+    "quantity": 50
+  }'
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json
+{
+  "id": 1,
+  "name": "Laptop",
+  "priceInCenters": 99999,
+  "quantity": 50,
+  "createdAt": "2025-01-15T10:30:00Z"
+}
+```
+
+</ResponseExample>
+
+<ParamField body="name" type="string" required>
+  Name of the product
+</ParamField>
+
+<ParamField body="priceInCents" type="integer" required>
+  Price in cents (e.g., 99999 = $999.99)
+</ParamField>
+
+<ParamField body="quantity" type="integer" required>
+  Initial stock quantity
+</ParamField>
+

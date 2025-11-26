@@ -1,22 +1,44 @@
-.env
-.env.*
-!.env.example
-
-# Go build files
-bin/
-build/
+# Binaries for programs and plugins
 *.exe
 *.exe~
 *.dll
 *.so
 *.dylib
 
-# Go cache
-tmp/
-*.log
+# Test binary, built with `go test -c`
+*.test
 
-# IDE files
-.vscode/
+# Output of the go coverage tool
+*.out
+
+# Dependency directories
+vendor/
+
+# Go workspace file
+go.work
+
+# IDE
 .idea/
+.vscode/
 *.swp
 *.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build output
+dist/
+build/
+
+# Node modules (for Mintlify)
+node_modules/
+.mint/
+
+# Environment files
+.env
+.env.local
+
+# Logs
+*.log

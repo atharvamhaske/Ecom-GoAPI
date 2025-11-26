@@ -1,0 +1,21 @@
+{
+  "name": "ecom-api-docs",
+  "version": "1.0.0",
+  "description": "Mintlify documentation for E-commerce API",
+  "scripts": {
+    "docs:dev": "mintlify dev",
+    "docs:start": "mintlify start",
+    "docs:build": "mintlify build"
+  },
+  "keywords": [
+    "api",
+    "documentation",
+    "mintlify"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "mintlify": "^4.0.0"
+  }
+}
+

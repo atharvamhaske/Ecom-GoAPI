@@ -1,0 +1,37 @@
+---
+title: API Reference
+description: Complete API reference for all endpoints
+---
+
+## Overview
+
+Welcome to the E-commerce API reference. This section provides detailed documentation for all available endpoints, including request/response formats, error codes, and examples.
+
+## Base URL
+
+All API requests should be made to:
+
+```
+http://localhost:8080
+```
+
+## Authentication
+
+Currently, the API does not require authentication. Future versions may include JWT-based authentication.
+
+## Response Format
+
+All successful responses return JSON data. Error responses include an error message in the response body.
+
+## Rate Limiting
+
+Rate limiting may be implemented in future versions. Please check the response headers for rate limit information.
+
+## Error Codes
+
+<ParamField body="status" type="integer">
+  <ParamField body="400" type="integer">Bad Request - Invalid input parameters</ParamField>
+  <ParamField body="404" type="integer">Not Found - Resource not found</ParamField>
+  <ParamField body="500" type="integer">Internal Server Error - Server error occurred</ParamField>
+</ParamField>
+
