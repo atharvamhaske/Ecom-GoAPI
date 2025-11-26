@@ -35,7 +35,7 @@ func (app *application) mount() http.Handler {
 	
 	
 	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("hi"))
+		w.Write([]byte("hi from server"))
 	})
 	
 	// http.ListenAndServe(":8080", r)
@@ -96,3 +96,5 @@ type config struct {
 type dbConfig struct {
 	dsn string //domain state name
 }
+
+//logger se age karo video 37:40
